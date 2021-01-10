@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <script lang="javascript" src="./scripts/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="./styles/notes.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <p id="title">Shweta Chaudhary</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p class = "sectionHeader">Title 1 <a id="btn_add_column_one" class="btn btn-danger btn-sm" onclick="addNewNote('notes_one')">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                    </p>
+                    <div id="notes_one">
+                    </div>
+                   
+                </div>
+                <div class="col-sm-4">
+                    <p class = "sectionHeader">Title 2 <a id="btn_add_column_two" class="btn btn-success btn-sm" onclick="addNewNote('notes_two')">
+                        <span class="glyphicon glyphicon-plus"></span> 
+                    </a>
+                    </p>
+                    <div id="notes_two">
+
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class = "sectionHeader">Title 3
+                    <a id="btn_add_column_three" class="btn btn-info btn-sm" onclick="addNewNote('notes_three')">
+                        <span class="glyphicon glyphicon-plus"></span>  
+                    </a>
+                    </p>
+                    <div id="notes_three">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="noteModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content" id="modal-content">
+                <div class="modal-header" id="modal-header">
+                    <a href="#" id="close-button">
+                        <span class="glyphicon glyphicon-remove black"></span>
+                       </a>
+                </div>
+                <div class="modal-body">
+                   <textarea id="contentEdit" rows="20" ></textarea>
+                </div>
+                <div class="modal-footer">
+                    <span id="voting-section">
+                    <a href="#" id="vote-button">
+                        <span class="glyphicon glyphicon-thumbs-up black"></span>
+                    </a>
+                    <span > + <span id="vote-count-text">0</span></span>
+                </span>
+                    <a href="#" id="delete-button">
+                        <span class="glyphicon glyphicon-trash black"></span>
+                    </a>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+    </body>
+</html>
